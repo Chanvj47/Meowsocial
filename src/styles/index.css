@@ -1,3 +1,9 @@
 @import './fonts.css';
 @import './tailwind.css';
 @import './theme.css';
+/* Đảm bảo mọi thẻ tổ tiên đều có chiều cao 100% */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}

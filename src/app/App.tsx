@@ -6,13 +6,14 @@ import { AdoptionListing } from './components/AdoptionListing';
 
 type Tab = 'videos' | 'lost' | 'adoption';
 
-export default function App() {
+export default function   App() {
   const [activeTab, setActiveTab] = useState<Tab>('videos');
+  
 
   return (
     <div className="size-full flex flex-col bg-white">
       {/* Main Content */}
-      <div className="flex-1 overflow-hidden">
+      <div className="flex-1 relative ">
         {activeTab === 'videos' && <VideoFeed />}
         {activeTab === 'lost' && <LostCatListing />}
         {activeTab === 'adoption' && <AdoptionListing />}
