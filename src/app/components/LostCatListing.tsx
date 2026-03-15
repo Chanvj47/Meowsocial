@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { MapPin, Phone, Clock, AlertCircle } from 'lucide-react';
+import { IconText } from './ui/icon-text';
 
 interface LostCat {
   id: string;
@@ -147,12 +148,11 @@ export function LostCatListing() {
 
                 <div className="space-y-1.5">
                   <div className="flex items-center gap-2 text-sm text-gray-600">
-                    <MapPin className="w-4 h-4 text-orange-500" />
-                    <span>{cat.location.district}, {cat.location.province}</span>
+                    <IconText icon= {MapPin} text ={cat.location.district  + ", " + cat.location.province}></IconText>
+                    
                   </div>
                   <div className="flex items-center gap-2 text-sm text-gray-600">
-                    <Clock className="w-4 h-4 text-orange-500" />
-                    <span>{cat.postedTime}</span>
+                    <IconText icon= {Clock} text= {cat.postedTime}></IconText>
                   </div>
                 </div>
               </div>
